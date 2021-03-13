@@ -31,5 +31,10 @@
     "date": "2021-03-13",
     "url": "http://doc.priate.cn/Doc/#/all/english",
     "isBlock": false
+  }, {
+    "name": "数学",
+    "date": "2021-03-13",
+    "url": "http://doc.priate.cn/Doc/#/all/math",
+    "isBlock": false
   }]
 }]
