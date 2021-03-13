@@ -60,9 +60,9 @@ export default {
   router: {
     // base: './'
   },
-  generate: {
-    dir: 'docs'
-  },
+  // generate: {
+  //   dir: 'docs'
+  // },
   colorMode: {
     preference: 'system', // default value of $colorMode.preference
     fallback: 'dark', // fallback value if not system preference found
