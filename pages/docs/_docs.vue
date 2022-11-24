@@ -3,21 +3,21 @@
     <el-header>
       <el-row class="head-list">
         <div class="head-list-left">
-          <nuxt-link to="/">
+          <nuxt-link to="/page">
             <el-button class="icon-button" icon="el-icon-s-home"></el-button>
           </nuxt-link>
         </div>
         <div class="head-list-right">
-          <el-link :href='homePageUrl' target='_blank'>
+          <el-link :href='homePageUrl' :underline="false" target='_blank'>
             <el-button class="icon-button" icon="el-icon-s-promotion"></el-button>
           </el-link>
-          <el-link>
+          <el-link :underline="false">
             <el-button @click="" class="icon-button" icon="el-icon-message"></el-button>
           </el-link>
-          <el-link target='_blank'>
+          <el-link :underline="false" target='_blank'>
             <el-button @click="openUnlock" class="icon-button" icon="el-icon-key"></el-button>
           </el-link>
-          <el-link>
+          <el-link :underline="false">
             <el-button @click="changeColorMode" class="icon-button" :icon="icon"></el-button>
           </el-link>
         </div>
@@ -127,12 +127,15 @@
       },
     },
     mounted(){
-      const chapters = require(`~/assets/data/docs/${this.$route.params.docs}.json`)
-      this.chapters = chapters
-      // console.log
-      // loader.then(data=>{
-      //   console.log(data)
-      // })
+      try{
+        const chapters = require(`~/assets/data/docs/${this.$route.params.docs}.json`)
+        this.chapters = chapters
+      }catch(e){
+        this.chapters = [{
+          "category": "模块加载失败，请检查是否创建配置目录。",
+          "chapters": []
+        }]
+      }
     }
   }
 

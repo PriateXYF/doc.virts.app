@@ -31,6 +31,7 @@
     margin-top: 80px;
     font-size: 40px;
     background-color: transparent;
+    border: 2px solid;
   }
 
   .next_button:hover {

@@ -87,11 +87,11 @@ textarea {
 }
 
 .next_button {
-  border-color: var(--card-border);
+  border-color: var(--font-color) !important;
 }
 
 .next_button:hover {
-  border-color: var(--card-border) !important;
+  border-color: var(--font-color) !important;
 }
 
 .unlock .el-dialog{

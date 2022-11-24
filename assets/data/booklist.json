@@ -2,8 +2,8 @@
 	"category": "数学",
 	"books": [{
 		"name": "高等数学",
-		"date": "2022-11-24",
-		"url": "docs/math",
+		"date": "考研复习",
+		"url": "math",
 		"isBlock": false
 	}]
 }, {
@@ -24,12 +24,12 @@
 	"books": [{
 		"name": "shell编程",
 		"date": "2021-02-06",
-		"url": "http://doc.priate.cn/Doc/#/all/shell",
-		"isBlock": false
+		"url": "",
+		"isBlock": true
 	}, {
 		"name": "英语",
-		"date": "2021-03-13",
-		"url": "http://doc.priate.cn/Doc/#/all/english",
+		"date": "考研复习",
+		"url": "english",
 		"isBlock": false
 	}]
 }]

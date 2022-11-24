@@ -72,11 +72,9 @@
     },
     methods: {
       pushTo(item) {
-        console.log(11)
-        console.log(item)
       },
       toPage(item) {
-        !item.isBlock && window.open(item.url, "_blank")
+        !item.isBlock && this.$router.push(`docs/${item.url}`)
       }
     },
   }

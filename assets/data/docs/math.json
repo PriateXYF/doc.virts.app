@@ -1,14 +1,14 @@
 [{
 	"category": "高数十八讲",
-	"books": [{
+	"chapters": [{
 		"name": "初等数学",
-		"date": "2022-11-24",
-		"url": "docs/math",
+		"desc": "第一讲",
+		"url": "01.初等数学.html",
 		"isBlock": false
 	},{
 		"name": "数列极限",
-		"date": "2022-11-24",
-		"url": "docs/math",
+		"desc": "第二讲",
+		"url": "02.数列极限.html",
 		"isBlock": false
 	}]
 }]

@@ -3,12 +3,12 @@
     <div v-for="(item, index) in chapters" :key="index">
       <el-divider class="card-divider" content-position="left">{{item.category}}</el-divider>
       <el-row class="allcard">
-        <el-col :xs="24" :sm="12" :md="8" :lg="6" :xl="4" v-for="(book, index) in item.books" :key="index">
-          <el-card @click.native="toPage(book)" class="indexcontainer card" :class="book.isBlock && 'block'">
+        <el-col :xs="24" :sm="12" :md="8" :lg="6" :xl="4" v-for="(chapter, index) in item.chapters" :key="index">
+          <el-card @click.native="toPage(chapter)" class="indexcontainer card" :class="chapter.isBlock && 'block'">
             <div style="padding: 14px;">
-              <span><i v-show="book.isBlock" class="el-icon-lock"></i>{{book.isBlock ? '' : book.name}}</span>
+              <span><i v-show="chapter.isBlock" class="el-icon-lock"></i>{{chapter.isBlock ? '' : chapter.name}}</span>
               <div class="bottom clearfix">
-                <div class="desc">{{book.isBlock ? '已锁定' : book.date}}</div>
+                <div class="desc">{{chapter.isBlock ? '已锁定' : chapter.desc}}</div>
               </div>
             </div>
           </el-card>
@@ -70,11 +70,9 @@
     },
     methods: {
       pushTo(item) {
-        console.log(11)
-        console.log(item)
       },
       toPage(item) {
-        !item.isBlock && window.open(item.url, "_blank")
+        !item.isBlock && window.open(`/${this.$route.params.docs}/${item.url}`, "_blank")
       }
     },
   }
